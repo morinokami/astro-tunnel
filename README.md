@@ -1,0 +1,1 @@
+# astro-integration-template

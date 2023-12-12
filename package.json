@@ -1,0 +1,32 @@
+{
+  "name": "astro-integration-template",
+  "description": "Template for Astro integrations",
+  "version": "0.0.1",
+  "type": "module",
+  "author": "Shinya Fujino <shf0811@gamil.com> (https://github.com/morinokami)",
+  "license": "MIT",
+  "keywords": [
+    "astro-integration"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "biome:ci": "biome ci ./src",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.4.1",
+    "astro": "4.0.4",
+    "typescript": "5.3.3"
+  },
+  "peerDependencies": {
+    "astro": "^4.0.0"
+  }
+}
