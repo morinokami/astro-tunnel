@@ -1,6 +1,6 @@
 {
-  "name": "astro-integration-template",
-  "description": "Template for Astro integrations",
+  "name": "astro-tunnel",
+  "description": "",
   "version": "0.0.1",
   "type": "module",
   "author": "Shinya Fujino <shf0811@gamil.com> (https://github.com/morinokami)",
@@ -21,10 +21,15 @@
     "biome:ci": "biome ci ./src",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "untun": "0.1.2"
+  },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
+    "@types/node": "20.10.4",
     "astro": "4.0.4",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "vite": "5.0.8"
   },
   "peerDependencies": {
     "astro": "^4.0.0"

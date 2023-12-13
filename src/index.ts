@@ -1,38 +1,62 @@
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import type { AstroIntegration } from "astro";
+import { startTunnel } from "untun";
+import type { Tunnel, TunnelOptions } from "untun";
 
-export default function myAstroIntegration(): AstroIntegration {
+type AstroTunnelOptions = TunnelOptions;
+
+export default function AstroTunnel(
+	options: AstroTunnelOptions = {
+		port: 4321,
+		hostname: "localhost",
+		protocol: "http",
+		verifyTLS: false,
+	},
+): AstroIntegration {
 	return {
-		name: "my-astro-integration",
+		name: "astro-tunnel",
 		hooks: {
-			"astro:config:setup": ({ logger }) => {
-				logger.info("astro:config:setup");
+			"astro:config:setup": ({ addDevToolbarApp }) => {
+				const __filename = fileURLToPath(import.meta.url);
+				const __dirname = dirname(__filename);
+				addDevToolbarApp(join(__dirname, "./astro-tunnel.js"));
 			},
-			"astro:config:done": ({ logger }) => {
-				logger.info("astro:config:done");
-			},
-			"astro:server:setup": ({ logger }) => {
-				logger.info("astro:server:setup");
-			},
-			"astro:server:start": ({ logger }) => {
-				logger.info("astro:server:start");
-			},
-			"astro:server:done": ({ logger }) => {
-				logger.info("astro:server:done");
-			},
-			"astro:build:start": ({ logger }) => {
-				logger.info("astro:build:start");
-			},
-			"astro:build:setup": ({ logger }) => {
-				logger.info("astro:build:setup");
-			},
-			"astro:build:generated": ({ logger }) => {
-				logger.info("astro:build:generated");
-			},
-			"astro:build:ssr": ({ logger }) => {
-				logger.info("astro:build:ssr");
-			},
-			"astro:build:done": ({ logger }) => {
-				logger.info("astro:build:done");
+			"astro:server:setup": ({ server }) => {
+				let tunnel: Tunnel | undefined;
+
+				server.ws.on("astro-dev-toolbar:astro-tunnel:initialized", async () => {
+					// Send the tunnel URL to the client when the app is initialized
+					server.ws.send("astro-tunnel:tunnel-url", {
+						url: await tunnel?.getURL(),
+					});
+				});
+
+				server.ws.on("astro-dev-toolbar:astro-tunnel:toggled", async () => {
+					// Send the tunnel URL to the client when the user clicks on the app icon
+					server.ws.send("astro-tunnel:tunnel-url", {
+						url: await tunnel?.getURL(),
+					});
+				});
+
+				server.ws.on(
+					"astro-tunnel:toggled",
+					async (data: { checked: boolean }) => {
+						// Toggle the tunnel when the user toggles the switch
+						if (data.checked) {
+							tunnel = await startTunnel(options);
+							server.ws.send("astro-tunnel:tunnel-url", {
+								url: await tunnel?.getURL(),
+							});
+						} else {
+							await tunnel?.close();
+							server.ws.send("astro-tunnel:tunnel-url", {
+								url: undefined,
+							});
+							tunnel = undefined;
+						}
+					},
+				);
 			},
 		},
 	};
