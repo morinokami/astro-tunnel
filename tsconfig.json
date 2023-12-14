@@ -6,11 +6,10 @@
     "declaration": true,
     "strict": true,
     "moduleResolution": "Node16",
-    "target": "ES2022",
+    "target": "ESNext",
     "module": "Node16",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "verbatimModuleSyntax": true,
-    "stripInternal": true
+    "verbatimModuleSyntax": true
   }
 }
