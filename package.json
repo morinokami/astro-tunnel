@@ -1,6 +1,6 @@
 {
   "name": "astro-tunnel",
-  "description": "",
+  "description": "Expose your local Astro server to the internet",
   "version": "0.0.1",
   "type": "module",
   "author": "Shinya Fujino <shf0811@gamil.com> (https://github.com/morinokami)",

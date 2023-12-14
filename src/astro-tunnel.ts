@@ -1,7 +1,7 @@
 import type { DevToolbarApp } from "astro";
 
 const appName = "Astro Tunnel";
-const appDescription = "Expose your local Astro server to the internet.";
+const appDescription = "Expose your local Astro server to the internet";
 const notReadyMessage = "Tunnel not ready";
 const readyMessage = "Tunnel ready at ";
 
