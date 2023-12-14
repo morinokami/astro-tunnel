@@ -1,6 +1,8 @@
 # Astro Tunnel
 
-Astro Tunnel is an Astro Integration that exposes your local Astro server to the internet. Internally, it uses Cloudflare’s Quick Tunnels via unjs/untun, so no additional configuration is required to start using it.
+<img width="1076" alt="Screenshot 2023-12-14 at 23 02 30" src="https://github.com/morinokami/astro-tunnel/assets/7889778/59ae61a3-f78a-4292-a143-bcf7f78c2e06">
+
+Astro Tunnel is an [Astro Dev Toolbar App](https://docs.astro.build/en/reference/dev-toolbar-app-reference/) that exposes your local Astro server to the internet. Internally, it uses Cloudflare’s [Quick Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) via [unjs/untun](https://github.com/unjs/untun), so no additional configuration is required to start using it.
 
 ## Installation
 
@@ -31,7 +33,7 @@ tunnel({
   // The URL to expose. Defaults to http://localhost:4321.
   url: 'http://localhost:4321',
   // The local server port to expose. Defaults to 4321. Only used if `url` is not set.
-  port: 3000,
+  port: 4321,
   // The local server hostname to expose. Defaults to localhost. Only used if `url` is not set.
   host: 'localhost',
   // The local server protocol to use. Defaults to http. Only used if `url` is not set.
