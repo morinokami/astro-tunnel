@@ -1,12 +1,12 @@
 # Astro Tunnel
 
-<img width="1076" alt="Screenshot 2023-12-14 at 23 02 30" src="https://github.com/morinokami/astro-tunnel/assets/7889778/59ae61a3-f78a-4292-a143-bcf7f78c2e06">
+![Screenshot](./.github/assets/screenshot.png)
 
-Astro Tunnel is an [Astro Dev Toolbar App](https://docs.astro.build/en/reference/dev-toolbar-app-reference/) that exposes your local Astro server to the internet. Internally, it uses Cloudflare's [Quick Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) via [unjs/untun](https://github.com/unjs/untun), so no additional configuration is required to start using it.
+Astro Tunnel is an [Astro Dev Toolbar App](https://docs.astro.build/en/reference/dev-toolbar-app-reference/) that enables your local Astro server to be accessible from the internet. Internally, it uses Cloudflare's [Quick Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) via [unjs/untun](https://github.com/unjs/untun), so no additional configuration is required to start tunneling.
 
 ## Installation
 
-Run the `astro add` command using the package manager of your choice and you're good to go:
+To install Astro Tunnel, run the following command with your preferred package manager:
 
 ```sh
 npx astro add astro-tunnel
@@ -24,9 +24,9 @@ export default defineConfig({
 });
 ```
 
-When starting a tunnel for the first time, you will be asked to accept the terms of the Cloudflare License, Terms and Privacy Policy on the command line. After accepting them, a tunnel will be started and a public URL for your local Astro server will be displayed inside the Dev Toolbar.
+Upon first starting a tunnel, you will be prompted to accept the terms of the Cloudflare License, Terms and Privacy Policy on the command line. Once you accept these terms, a tunnel will be initiated and a public URL for your local Astro server will be displayed inside the Dev Toolbar.
 
-If you have any issues with starting a tunnel, try separately installing `cloudflared` by running `npx untun@latest tunnel http://localhost:3000` first. After that, you should be able to start a tunnel from within the App.
+If you encounter any issues while starting a tunnel, try installing `cloudflared` separately by running `npx untun@latest tunnel http://localhost:3000` first. After that, you should be able to start a tunnel from within the App.
 
 ## Configuration
 
