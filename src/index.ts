@@ -6,7 +6,7 @@ import type { Tunnel, TunnelOptions } from "untun";
 
 type AstroTunnelOptions = TunnelOptions;
 
-export default function AstroTunnel(
+export default function createAstroTunnelIntegration(
 	options: AstroTunnelOptions = {
 		port: 4321,
 		hostname: "localhost",
