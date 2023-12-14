@@ -6,6 +6,9 @@
   "author": "Shinya Fujino <shf0811@gamil.com> (https://github.com/morinokami)",
   "license": "MIT",
   "keywords": [
+    "astro",
+    "withastro",
+    "astro-component",
     "astro-integration"
   ],
   "exports": {
