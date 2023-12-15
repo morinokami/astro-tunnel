@@ -5,6 +5,11 @@
   "type": "module",
   "author": "Shinya Fujino <shf0811@gmail.com> (https://github.com/morinokami)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morinokami/astro-tunnel.git"
+  },
+  "bugs": "https://github.com/morinokami/astro-tunnel/issues",
   "keywords": [
     "astro",
     "withastro",
