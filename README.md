@@ -44,5 +44,7 @@ tunnel({
   protocol: 'http',
   // Whether to verify the local server TLS certificate. Defaults to false.
   verifyTLS: false,
+  // Whether to accept the Cloudflare terms of service. Defaults to false.
+  acceptCloudflareNotice: false,
 });
 ```

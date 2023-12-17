@@ -12,6 +12,7 @@ export default function createAstroTunnelIntegration(
 		hostname: "localhost",
 		protocol: "http",
 		verifyTLS: false,
+		acceptCloudflareNotice: false,
 	},
 ): AstroIntegration {
 	return {
