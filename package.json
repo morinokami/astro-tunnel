@@ -27,7 +27,8 @@
   "scripts": {
     "build": "tsc",
     "biome:ci": "biome ci ./src",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "publish": "pnpm run build && pnpm changeset publish"
   },
   "dependencies": {
     "untun": "0.1.3"
