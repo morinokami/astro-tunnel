@@ -20,11 +20,12 @@ jobs:
           node-version: 20
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
           version: pnpm changeset version
-          publish: pnpm publish
+          publish: pnpm changeset publish
           commit: "[ci] release"
           title: "[ci] release"
         env:
