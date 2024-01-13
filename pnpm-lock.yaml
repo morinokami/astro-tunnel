@@ -20,17 +20,17 @@ devDependencies:
     specifier: 2.27.1
     version: 2.27.1
   '@types/node':
-    specifier: 20.10.5
-    version: 20.10.5
+    specifier: 20.11.0
+    version: 20.11.0
   astro:
     specifier: 4.1.1
-    version: 4.1.1(@types/node@20.10.5)(typescript@5.3.3)
+    version: 4.1.1(@types/node@20.11.0)(typescript@5.3.3)
   typescript:
     specifier: 5.3.3
     version: 5.3.3
   vite:
     specifier: 5.0.11
-    version: 5.0.11(@types/node@20.10.5)
+    version: 5.0.11(@types/node@20.11.0)
 
 packages:
 
@@ -1235,8 +1235,8 @@ packages:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: true
 
-  /@types/node@20.10.5:
-    resolution: {integrity: sha512-nNPsNE65wjMxEKI93yOP+NPGGBJz/PoN3kZsVLee0XMiJolxSekEVD8wRwBUBqkwc7UWop0edW50yrCQW4CyRw==}
+  /@types/node@20.11.0:
+    resolution: {integrity: sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1375,7 +1375,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /astro@4.1.1(@types/node@20.10.5)(typescript@5.3.3):
+  /astro@4.1.1(@types/node@20.11.0)(typescript@5.3.3):
     resolution: {integrity: sha512-p/S1Ns4+yVh2lEsFW9hkJNRbnPfFWZ+1Wv7DSR3mDnabgCs49T7EbvOy8YIlLo0gtPAjI+b+4OEKRsxtBay2aA==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -1438,7 +1438,7 @@ packages:
       tsconfck: 3.0.0(typescript@5.3.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.0.11(@types/node@20.10.5)
+      vite: 5.0.11(@types/node@20.11.0)
       vitefu: 0.2.5(vite@5.0.11)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -4659,7 +4659,7 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite@5.0.11(@types/node@20.10.5):
+  /vite@5.0.11(@types/node@20.11.0):
     resolution: {integrity: sha512-XBMnDjZcNAw/G1gEiskiM1v6yzM4GE5aMGvhWTlHAYYhxb7S3/V1s3m2LDHa8Vh6yIWYYB0iJwsEaS523c4oYA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4687,7 +4687,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.10.5
+      '@types/node': 20.11.0
       esbuild: 0.19.9
       postcss: 8.4.32
       rollup: 4.9.0
@@ -4703,7 +4703,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.0.11(@types/node@20.10.5)
+      vite: 5.0.11(@types/node@20.11.0)
     dev: true
 
   /wcwidth@1.0.1:
