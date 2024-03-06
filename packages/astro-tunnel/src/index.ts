@@ -26,32 +26,35 @@ export default function createAstroTunnelIntegration(
 			"astro:server:setup": ({ server }) => {
 				let tunnel: Tunnel | undefined;
 
-				server.ws.on("astro-dev-toolbar:astro-tunnel:initialized", async () => {
-					// Send the tunnel URL to the client when the app is initialized
-					server.ws.send("astro-tunnel:tunnel-url", {
-						url: await tunnel?.getURL(),
-					});
-				});
+				server.hot.on(
+					"astro-dev-toolbar:astro-tunnel:initialized",
+					async () => {
+						// Send the tunnel URL to the client when the app is initialized
+						server.hot.send("astro-tunnel:tunnel-url", {
+							url: await tunnel?.getURL(),
+						});
+					},
+				);
 
-				server.ws.on("astro-dev-toolbar:astro-tunnel:toggled", async () => {
+				server.hot.on("astro-dev-toolbar:astro-tunnel:toggled", async () => {
 					// Send the tunnel URL to the client when the user clicks on the app icon
-					server.ws.send("astro-tunnel:tunnel-url", {
+					server.hot.send("astro-tunnel:tunnel-url", {
 						url: await tunnel?.getURL(),
 					});
 				});
 
-				server.ws.on(
+				server.hot.on(
 					"astro-tunnel:toggled",
 					async (data: { checked: boolean }) => {
 						// Toggle the tunnel when the user toggles the switch
 						if (data.checked) {
 							tunnel = await startTunnel(options);
-							server.ws.send("astro-tunnel:tunnel-url", {
+							server.hot.send("astro-tunnel:tunnel-url", {
 								url: await tunnel?.getURL(),
 							});
 						} else {
 							await tunnel?.close();
-							server.ws.send("astro-tunnel:tunnel-url", {
+							server.hot.send("astro-tunnel:tunnel-url", {
 								url: undefined,
 							});
 							tunnel = undefined;

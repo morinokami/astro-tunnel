@@ -20,4 +20,4 @@ jobs:
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
       - run: pnpm run typecheck
-      - run: pnpm run biome:ci
+      - run: pnpm run biome
