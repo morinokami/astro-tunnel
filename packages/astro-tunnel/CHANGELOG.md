@@ -1,5 +1,11 @@
 # astro-tunnel
 
+## 0.1.3
+
+### Patch Changes
+
+- [#40](https://github.com/morinokami/astro-tunnel/pull/40) [`b05ccca`](https://github.com/morinokami/astro-tunnel/commit/b05ccca8d413062a73821bd119462f06a9898549) Thanks [@morinokami](https://github.com/morinokami)! - Project restructuring
+
 ## 0.1.2
 
 ### Patch Changes
