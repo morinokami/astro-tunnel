@@ -1,0 +1,47 @@
+{
+  "name": "astro-tunnel",
+  "description": "Expose your local Astro server to the internet",
+  "version": "0.1.2",
+  "type": "module",
+  "author": "Shinya Fujino <shf0811@gmail.com> (https://github.com/morinokami)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morinokami/astro-tunnel.git"
+  },
+  "bugs": "https://github.com/morinokami/astro-tunnel/issues",
+  "keywords": [
+    "astro",
+    "withastro",
+    "astro-component",
+    "astro-integration"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "biome:ci": "biome ci ./src",
+    "typecheck": "tsc --noEmit",
+    "publish": "pnpm run build && pnpm changeset publish"
+  },
+  "dependencies": {
+    "untun": "0.1.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "@types/node": "20.11.24",
+    "astro": "4.4.12",
+    "tsup": "^8.0.2",
+    "typescript": "5.3.3",
+    "vite": "5.1.5"
+  },
+  "peerDependencies": {
+    "astro": "^4.0.0"
+  }
+}
