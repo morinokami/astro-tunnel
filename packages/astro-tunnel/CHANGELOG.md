@@ -1,5 +1,13 @@
 # astro-tunnel
 
+## 0.1.5
+
+### Patch Changes
+
+- [#46](https://github.com/morinokami/astro-tunnel/pull/46) [`d1e8108`](https://github.com/morinokami/astro-tunnel/commit/d1e81086aa83af28c2bf5956a42bf8f51531e027) Thanks [@morinokami](https://github.com/morinokami)! - Close on outside click
+
+- [#44](https://github.com/morinokami/astro-tunnel/pull/44) [`7a45417`](https://github.com/morinokami/astro-tunnel/commit/7a45417d6505ce02656fdce4bc6a3e75ba7c0329) Thanks [@morinokami](https://github.com/morinokami)! - Update app icon
+
 ## 0.1.4
 
 ### Patch Changes
