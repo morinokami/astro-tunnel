@@ -1,4 +1,5 @@
 import type { DevToolbarApp } from "astro";
+import { closeOnOutsideClick } from "./utils";
 
 const appName = "Astro Tunnel";
 const appDescription = "Expose your local Astro server to the internet";
@@ -109,5 +110,7 @@ export default {
 		windowElement.appendChild(field);
 
 		canvas.appendChild(windowElement);
+
+		closeOnOutsideClick(eventTarget);
 	},
 } satisfies DevToolbarApp;
