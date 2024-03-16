@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "20.11.25",
-    "astro": "4.4.13",
+    "astro": "4.5.5",
     "tsup": "^8.0.2",
     "typescript": "5.3.3",
     "vite": "5.1.5"
