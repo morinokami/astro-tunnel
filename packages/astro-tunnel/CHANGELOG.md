@@ -1,5 +1,11 @@
 # astro-tunnel
 
+## 0.1.6
+
+### Patch Changes
+
+- [#52](https://github.com/morinokami/astro-tunnel/pull/52) [`e57e099`](https://github.com/morinokami/astro-tunnel/commit/e57e099a75521f4b99bbdf22b4b0e847e1d4ba6c) Thanks [@morinokami](https://github.com/morinokami)! - Use Bun
+
 ## 0.1.5
 
 ### Patch Changes
