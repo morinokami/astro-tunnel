@@ -11,9 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.5.5",
+    "astro": "^4.7.0",
     "astro-tunnel": "workspace:*",
-    "@astrojs/check": "^0.5.9",
-    "typescript": "^5.4.2"
+    "@astrojs/check": "^0.5.10",
+    "typescript": "^5.4.5"
   }
 }

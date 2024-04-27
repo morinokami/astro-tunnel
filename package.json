@@ -18,7 +18,7 @@
     "build": "bun run --cwd packages/astro-tunnel build"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.6.1",
+    "@biomejs/biome": "^1.7.1",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.1"
   }
