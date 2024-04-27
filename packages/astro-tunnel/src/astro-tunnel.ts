@@ -1,3 +1,4 @@
+import type { DevToolbarApp } from "astro";
 import { defineToolbarApp } from "astro/toolbar";
 import { closeOnOutsideClick } from "./utils";
 
@@ -110,4 +111,4 @@ export default defineToolbarApp({
 
 		closeOnOutsideClick(eventTarget);
 	},
-});
+}) satisfies DevToolbarApp;
