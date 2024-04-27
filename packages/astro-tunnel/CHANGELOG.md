@@ -1,5 +1,11 @@
 # astro-tunnel
 
+## 0.1.7
+
+### Patch Changes
+
+- [#54](https://github.com/morinokami/astro-tunnel/pull/54) [`75ad8a7`](https://github.com/morinokami/astro-tunnel/commit/75ad8a711a2e02023fa3a23a825aa79a08d52ab8) Thanks [@morinokami](https://github.com/morinokami)! - Use defineToolbarApp
+
 ## 0.1.6
 
 ### Patch Changes
