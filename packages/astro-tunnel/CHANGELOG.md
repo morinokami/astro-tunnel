@@ -1,5 +1,11 @@
 # astro-tunnel
 
+## 0.1.8
+
+### Patch Changes
+
+- [#60](https://github.com/morinokami/astro-tunnel/pull/60) [`f9260b1`](https://github.com/morinokami/astro-tunnel/commit/f9260b131a3e7b365a114fe68302dce80fb756fc) Thanks [@morinokami](https://github.com/morinokami)! - Update peerDependencies
+
 ## 0.1.7
 
 ### Patch Changes
