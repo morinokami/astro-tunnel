@@ -1,9 +1,9 @@
-import { defineConfig } from "tsup";
+import { defineConfig } from "tsdown";
 
 export default defineConfig({
-	dts: true,
 	entry: ["src/index.ts", "src/astro-tunnel.ts"],
 	format: ["esm"],
-	sourcemap: true,
-	target: "esnext",
+	dts: true,
+	clean: true,
+	minify: true,
 });
