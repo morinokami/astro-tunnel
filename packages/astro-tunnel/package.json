@@ -35,7 +35,7 @@
     "@types/node": "24.2.1",
     "astro": "5.12.9",
     "tsdown": "0.14.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "astro": ">=4.0.0"

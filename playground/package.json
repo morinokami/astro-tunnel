@@ -14,6 +14,6 @@
     "astro": "^5.12.9",
     "astro-tunnel": "workspace:*",
     "@astrojs/check": "^0.9.4",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
