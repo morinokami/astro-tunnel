@@ -13,7 +13,7 @@
   "dependencies": {
     "astro": "^5.12.9",
     "astro-tunnel": "workspace:*",
-    "@astrojs/check": "^0.9.4",
+    "@astrojs/check": "^0.9.5",
     "typescript": "^5.9.2"
   }
 }
