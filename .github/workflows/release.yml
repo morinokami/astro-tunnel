@@ -5,25 +5,40 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
 jobs:
   release:
     name: Release
     if: ${{ github.repository_owner == 'morinokami' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: oven-sh/setup-bun@v2
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-      - run: bun install --frozen-lockfile
-      - run: bun run build
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Install the latest npm
+        run: bun install -g npm@latest
+
+      - name: Build
+        run: bun run build
+
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
           version: bunx changeset version
-          publish: bunx changeset publish
+          publish: npx changeset publish
           commit: "[ci] release"
           title: "[ci] release"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

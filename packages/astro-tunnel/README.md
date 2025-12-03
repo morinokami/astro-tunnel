@@ -1,6 +1,6 @@
 # Astro Tunnel
 
-![Screenshot](./.github/assets/screenshot.png)
+![Screenshot](https://github.com/morinokami/astro-tunnel/blob/main/.github/assets/screenshot.png?raw=true)
 
 Astro Tunnel is an [Astro Dev Toolbar App](https://docs.astro.build/en/reference/dev-toolbar-app-reference/) that enables your local Astro server to be accessible from the internet. Internally, it uses Cloudflare's [Quick Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) via [unjs/untun](https://github.com/unjs/untun), so no additional configuration is required to start tunneling.
 

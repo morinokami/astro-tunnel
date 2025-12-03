@@ -1,8 +1,8 @@
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { AstroIntegration } from "astro";
-import { startTunnel } from "untun";
 import type { Tunnel, TunnelOptions } from "untun";
+import { startTunnel } from "untun";
 
 type AstroTunnelOptions = TunnelOptions;
 

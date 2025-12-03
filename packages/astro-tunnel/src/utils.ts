@@ -12,7 +12,7 @@ export function closeOnOutsideClick(eventTarget: EventTarget) {
 			}),
 		);
 	}
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	// biome-ignore lint/suspicious/noExplicitAny: explanation
 	eventTarget.addEventListener("app-toggled", (event: any) => {
 		if (event.detail.state === true) {
 			document.addEventListener("click", onPageClick, true);
