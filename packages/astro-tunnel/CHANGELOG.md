@@ -1,5 +1,11 @@
 # astro-tunnel
 
+## 0.1.9
+
+### Patch Changes
+
+- [#181](https://github.com/morinokami/astro-tunnel/pull/181) [`8025c09`](https://github.com/morinokami/astro-tunnel/commit/8025c0932531737a8b642d22f65ae8d769bfc83f) Thanks [@morinokami](https://github.com/morinokami)! - chore: update dependencies
+
 ## 0.1.8
 
 ### Patch Changes
