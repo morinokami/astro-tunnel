@@ -69,7 +69,7 @@ export default defineToolbarApp({
 		toggle.input.addEventListener("change", (e) => {
 			import.meta.hot?.send("astro-tunnel:toggled", {
 				// Send the state of the toggle to the server
-				// @ts-ignore
+				// @ts-expect-error
 				checked: e.currentTarget?.checked,
 			});
 		});
