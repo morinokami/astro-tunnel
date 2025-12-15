@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "24.10.1",
-    "@typescript/native-preview": "7.0.0-dev.20251203.1",
+    "@typescript/native-preview": "7.0.0-dev.20251214.1",
     "astro": "5.16.3",
     "tsdown": "0.14.0"
   },
