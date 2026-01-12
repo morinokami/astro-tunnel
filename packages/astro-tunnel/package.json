@@ -34,7 +34,7 @@
   "devDependencies": {
     "@types/node": "24.10.1",
     "@typescript/native-preview": "7.0.0-dev.20251203.1",
-    "astro": "5.16.6",
+    "astro": "5.16.8",
     "tsdown": "0.14.0"
   },
   "peerDependencies": {
